@@ -3,8 +3,8 @@
   <channel>
     <title>Lucas Blog</title>
     <link>https://lucazou.github.io/</link>
-    <description>Recent content on Lucas Blog</description>
-    <generator>Hugo</generator>
+    <description>Lucas Blog</description>
+    <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://lucazou.github.io/index.xml" rel="self" type="application/rss+xml" />

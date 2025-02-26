@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lucas Blog</title>
+    <title>所有文章 - Lucas Blog</title>
     <link>https://lucazou.github.io/posts/</link>
-    <description>Recent content in Posts on Lucas Blog</description>
-    <generator>Hugo</generator>
+    <description>Lucas Blog</description>
+    <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://lucazou.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
