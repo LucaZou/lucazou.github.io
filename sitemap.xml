@@ -1,42 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lucazou.github.io/categories/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://lucazou.github.io/tags/draft/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://lucazou.github.io/categories/draft/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
     <loc>https://lucazou.github.io/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://lucazou.github.io/posts/583bc6c/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://lucazou.github.io/posts/583bc6c/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://lucazou.github.io/posts/583bc6c/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
+    <lastmod>2025-02-27T09:46:05+08:00</lastmod>
   </url>
   <url>
     <loc>https://lucazou.github.io/posts/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
+    <lastmod>2025-02-27T09:46:05+08:00</lastmod>
   </url>
   <url>
-    <loc>https://lucazou.github.io/tags/</loc>
-    <lastmod>2025-02-26T21:06:05+08:00</lastmod>
+    <loc>https://lucazou.github.io/categories/</loc>
   </url>
   <url>
     <loc>https://lucazou.github.io/collections/</loc>
+  </url>
+  <url>
+    <loc>https://lucazou.github.io/tags/</loc>
   </url>
 </urlset>
