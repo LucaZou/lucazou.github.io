@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Anomaly Detection App 文档 - Lucas Blog</title><meta name="author" content="">
+<meta name="description" content=" 摘要：v1.1
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="Anomaly Detection App 文档">
+  <meta itemprop="description" content="摘要：v1.1">
+  <meta itemprop="datePublished" content="2025-03-01T14:18:24+08:00">
+  <meta itemprop="dateModified" content="2025-03-01T14:18:24+08:00">
+  <meta itemprop="wordCount" content="340">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="https://lucazou.github.io/posts/20250301141824/">
+  <meta property="og:site_name" content="Lucas Blog">
+  <meta property="og:title" content="Anomaly Detection App 文档">
+  <meta property="og:description" content="摘要：v1.1">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-01T14:18:24+08:00">
+    <meta property="article:modified_time" content="2025-03-01T14:18:24+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Anomaly Detection App 文档">
+  <meta name="twitter:description" content="摘要：v1.1">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lucazou.github.io/posts/20250301141824/" title="Anomaly Detection App 文档 - Lucas Blog" /><link rel="prev" type="text/html" href="https://lucazou.github.io/posts/20250227095808/" title="new" /><link rel="alternate" type="text/markdown" href="https://lucazou.github.io/posts/20250301141824/index.md" title="Anomaly Detection App 文档 - Lucas Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Anomaly Detection App 文档",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/lucazou.github.io\/posts\/20250301141824\/"
+    },"genre": "posts","keywords": "draft","wordcount":  340 ,
+    "url": "https:\/\/lucazou.github.io\/posts\/20250301141824\/","datePublished": "2025-03-01T14:18:24+08:00","dateModified": "2025-03-01T14:18:24+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Lucas Blog"><span class="header-title-text">Lucas Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Lucas Blog"><span class="header-title-text">Lucas Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Anomaly Detection App 文档</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/draft/" class="post-category" title="分类 - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="发布于 2025-03-01 14:18:24"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-01">2025-03-01</time></span>&nbsp;<span title="340 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#项目概述">项目概述</a>
+      <ul>
+        <li><a href="#示例图">示例图</a></li>
+        <li><a href="#主要功能">主要功能</a></li>
+        <li><a href="#技术栈">技术栈</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装与运行">安装与运行</a>
+      <ul>
+        <li><a href="#环境要求">环境要求</a></li>
+        <li><a href="#依赖安装">依赖安装</a></li>
+        <li><a href="#项目文件">项目文件</a></li>
+        <li><a href="#配置">配置</a></li>
+        <li><a href="#运行">运行</a></li>
+      </ul>
+    </li>
+    <li><a href="#代码结构与模块说明">代码结构与模块说明</a>
+      <ul>
+        <li><a href="#文件结构">文件结构</a></li>
+        <li><a href="#核心类与功能">核心类与功能</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用说明">使用说明</a>
+      <ul>
+        <li><a href="#界面布局">界面布局</a></li>
+        <li><a href="#操作流程">操作流程</a></li>
+        <li><a href="#输出结果">输出结果</a></li>
+      </ul>
+    </li>
+    <li><a href="#维护与扩展">维护与扩展</a>
+      <ul>
+        <li><a href="#常见问题排查">常见问题排查</a></li>
+        <li><a href="#扩展建议">扩展建议</a></li>
+        <li><a href="#代码维护">代码维护</a></li>
+      </ul>
+    </li>
+    <li><a href="#版本信息">版本信息</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><blockquote>
+<p>摘要：v1.1</p></blockquote>
+<h2 id="anomaly-detection-app-文档" class="heading-element"><span>Anomaly Detection App 文档</span>
+  <a href="#anomaly-detection-app-%e6%96%87%e6%a1%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="项目概述" class="heading-element"><span>项目概述</span>
+  <a href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>Anomaly Detection App</strong> 是一个基于 Python 和 PyQt5 的桌面应用程序，用于图像异常检测。它利用深度学习模型（如 Wide ResNet50）对输入图像进行异常检测，支持单张图片和批量图片处理。应用程序提供直观的图形界面，允许用户选择模型、查看检测结果、切换批量处理结果，并记录日志。</p>
+<h3 id="示例图" class="heading-element"><span>示例图</span>
+  <a href="#%e7%a4%ba%e4%be%8b%e5%9b%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418190.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418190.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418190.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418190.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ul>
+<li>
+<p>单个检测
+<img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418192.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418192.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418192.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418192.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+</li>
+<li>
+<p>批量检测
+<img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418193.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418193.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418193.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503011418193.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+</li>
+</ul>
+<h3 id="主要功能" class="heading-element"><span>主要功能</span>
+  <a href="#%e4%b8%bb%e8%a6%81%e5%8a%9f%e8%83%bd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>模型选择</strong>: 通过下拉菜单选择预定义的异常检测模型。</li>
+<li><strong>单张检测</strong>: 检测单张图片并显示结果。</li>
+<li><strong>批量检测</strong>: 处理文件夹中的多张图片，逐张显示结果。</li>
+<li><strong>结果切换</strong>: 批量检测后支持通过“Next”按钮切换图片。</li>
+<li><strong>状态显示</strong>: 显示当前模型和图片名称。</li>
+<li><strong>日志记录</strong>: 操作和错误信息记录到界面及文件。</li>
+<li><strong>灵活配置</strong>: 通过 JSON 配置文件管理模型列表和加载模式。</li>
+</ul>
+<h3 id="技术栈" class="heading-element"><span>技术栈</span>
+  <a href="#%e6%8a%80%e6%9c%af%e6%a0%88" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>编程语言</strong>: Python 3.8+</li>
+<li><strong>GUI 框架</strong>: PyQt5</li>
+<li><strong>深度学习</strong>: PyTorch, torchvision</li>
+<li><strong>图像处理</strong>: Pillow, NumPy, Matplotlib</li>
+<li><strong>其他</strong>: tqdm（进度条）, logging（日志）</li>
+</ul>
+<hr>
+<h2 id="安装与运行" class="heading-element"><span>安装与运行</span>
+  <a href="#%e5%ae%89%e8%a3%85%e4%b8%8e%e8%bf%90%e8%a1%8c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="环境要求" class="heading-element"><span>环境要求</span>
+  <a href="#%e7%8e%af%e5%a2%83%e8%a6%81%e6%b1%82" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>操作系统</strong>: Windows, macOS, 或 Linux（跨平台支持）</li>
+<li><strong>Python</strong>: 3.8 或更高版本</li>
+<li><strong>硬件</strong>: 支持 CUDA 的 GPU（可选，提升性能）</li>
+</ul>
+<h3 id="依赖安装" class="heading-element"><span>依赖安装</span>
+  <a href="#%e4%be%9d%e8%b5%96%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>安装所需库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install PyQt5 torch torchvision pillow numpy matplotlib tqdm</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>torch</strong>: 若需 GPU 支持，请根据硬件安装对应版本（参考 <a href="https://pytorch.org/"target="_blank" rel="external nofollow noopener noreferrer">PyTorch 官网</a>）。</li>
+<li><strong>simplenet</strong>: 如果你的模型依赖自定义模块 <code>simplenet</code>，需自行提供或安装。</li>
+</ul>
+<h3 id="项目文件" class="heading-element"><span>项目文件</span>
+  <a href="#%e9%a1%b9%e7%9b%ae%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>下载项目代码并确保以下结构完整：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">anomaly_detection_app</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">gui</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">image_processor</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">model_loader</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">config</span><span class="o">.</span><span class="n">json</span>
+</span></span><span class="line"><span class="cl"><span class="err">├──</span> <span class="n">logs</span><span class="o">/</span>              <span class="c1"># 日志保存目录（自动创建）</span>
+</span></span><span class="line"><span class="cl"><span class="err">└──</span> <span class="n">output</span><span class="o">/</span>           <span class="c1"># 检测结果保存目录（自动创建）</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置" class="heading-element"><span>配置</span>
+  <a href="#%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>编辑 <code>config.json</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;load_mode&#34;</span><span class="p">:</span> <span class="s2">&#34;preload&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;models&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Metal Nut&#34;</span><span class="p">:</span> <span class="s2">&#34;models/mvtec_metal_nut/ckpt.pth&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Screw&#34;</span><span class="p">:</span> <span class="s2">&#34;D:\\Projects_D\\Graduation-Project\\preject\\anomaly_detection_application\\models\\mvtec_screw\\ckpt.pth&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>load_mode</strong>:
+<ul>
+<li><code>&quot;preload&quot;</code>: 启动时加载所有模型，切换无需等待。</li>
+<li><code>&quot;ondemand&quot;</code>: 启动后手动选择加载，加快启动速度。</li>
+</ul>
+</li>
+<li><strong>models</strong>: 模型名称和路径键值对，路径需指向实际 <code>.pth</code> 文件。</li>
+</ul>
+<h3 id="运行" class="heading-element"><span>运行</span>
+  <a href="#%e8%bf%90%e8%a1%8c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>确保模型文件路径正确。</li>
+<li>进入项目目录：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> anomaly_detection_app</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>执行：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python main.py</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<hr>
+<h2 id="代码结构与模块说明" class="heading-element"><span>代码结构与模块说明</span>
+  <a href="#%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84%e4%b8%8e%e6%a8%a1%e5%9d%97%e8%af%b4%e6%98%8e" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="文件结构" class="heading-element"><span>文件结构</span>
+  <a href="#%e6%96%87%e4%bb%b6%e7%bb%93%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong><code>main.py</code></strong>:
+<ul>
+<li>程序入口，加载配置，初始化设备和处理器，启动 GUI。</li>
+</ul>
+</li>
+<li><strong><code>gui.py</code></strong>:
+<ul>
+<li>定义图形界面，包括工具栏、图像显示区、切换按钮、状态标签和日志区。</li>
+<li>处理用户交互（如模型选择、检测操作）。</li>
+</ul>
+</li>
+<li><strong><code>image_processor.py</code></strong>:
+<ul>
+<li>图像处理逻辑，包括单张和批量检测，管理模型缓存和输出路径。</li>
+</ul>
+</li>
+<li><strong><code>model_loader.py</code></strong>:
+<ul>
+<li>模型加载逻辑，定义 <code>load_model</code> 函数。</li>
+</ul>
+</li>
+<li><strong><code>config.json</code></strong>:
+<ul>
+<li>配置文件，存储模型列表和加载模式。</li>
+</ul>
+</li>
+</ul>
+<h3 id="核心类与功能" class="heading-element"><span>核心类与功能</span>
+  <a href="#%e6%a0%b8%e5%bf%83%e7%b1%bb%e4%b8%8e%e5%8a%9f%e8%83%bd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>
+<p><strong><code>ImageProcessor</code> (image_processor.py)</strong>:</p>
+<ul>
+<li><strong>属性</strong>:
+<ul>
+<li><code>model_cache</code>: 存储已加载模型。</li>
+<li><code>current_model_name</code>: 当前模型名称。</li>
+<li><code>output_base_dir</code>: 根据模型路径动态生成的输出目录。</li>
+</ul>
+</li>
+<li><strong>方法</strong>:
+<ul>
+<li><code>set_model</code>: 设置当前模型，支持缓存或按需加载。</li>
+<li><code>detect_single_image</code>: 处理单张图片。</li>
+<li><code>detect_batch_images</code>: 处理批量图片，返回结果路径列表。</li>
+</ul>
+</li>
+<li><strong>信号</strong>:
+<ul>
+<li><code>progress_updated</code>: 更新批量处理进度。</li>
+<li><code>log_message</code>: 发送日志消息。</li>
+<li><code>batch_finished</code>: 批量处理完成，返回结果路径。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>MainWindow</code> (gui.py)</strong>:</p>
+<ul>
+<li><strong>属性</strong>:
+<ul>
+<li><code>result_paths</code>: 存储检测结果路径。</li>
+<li><code>current_index</code>: 当前显示图片的索引。</li>
+<li><code>current_model_name</code>: 当前模型名称。</li>
+</ul>
+</li>
+<li><strong>方法</strong>:
+<ul>
+<li><code>select_model</code>: 处理模型选择。</li>
+<li><code>detect_single</code> / <code>detect_batch</code>: 触发检测。</li>
+<li><code>prev_image</code> / <code>next_image</code>: 切换图片（Previous 禁用）。</li>
+<li><code>update_buttons</code>: 动态调整按钮状态。</li>
+</ul>
+</li>
+<li><strong>界面元素</strong>:
+<ul>
+<li>工具栏（模型选择、检测操作）。</li>
+<li>状态标签（模型名、图片名）。</li>
+<li>图像显示区、切换按钮、进度条、日志区。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>load_model</code> (model_loader.py)</strong>:</p>
+<ul>
+<li>加载 Wide ResNet50 模型及其权重，支持自定义参数。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="使用说明" class="heading-element"><span>使用说明</span>
+  <a href="#%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="界面布局" class="heading-element"><span>界面布局</span>
+  <a href="#%e7%95%8c%e9%9d%a2%e5%b8%83%e5%b1%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>工具栏</strong>:
+<ul>
+<li>“Select Model”: 下拉菜单选择模型。</li>
+<li>“Detect Single Image”: 单张检测。</li>
+<li>“Detect Batch Images”: 批量检测。</li>
+</ul>
+</li>
+<li><strong>状态区</strong>:
+<ul>
+<li>“当前模型”: 显示选择的模型名称。</li>
+<li>“当前图片”: 显示当前图片文件名。</li>
+</ul>
+</li>
+<li><strong>图像显示区</strong>: 显示检测结果（原图+热图）。</li>
+<li><strong>切换按钮</strong>:
+<ul>
+<li>“Previous”: 始终禁用。</li>
+<li>“Next”: 批量检测时启用，切换下一张。</li>
+</ul>
+</li>
+<li><strong>进度条</strong>: 批量检测时显示进度。</li>
+<li><strong>日志区</strong>: 显示操作日志和错误信息。</li>
+</ul>
+<h3 id="操作流程" class="heading-element"><span>操作流程</span>
+  <a href="#%e6%93%8d%e4%bd%9c%e6%b5%81%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li><strong>启动程序</strong>:
+<ul>
+<li>预加载模式：启动时加载所有模型，日志记录加载状态。</li>
+<li>按需加载模式：启动后显示“未选择模型”，需手动选择。</li>
+</ul>
+</li>
+<li><strong>选择模型</strong>:
+<ul>
+<li>点击“Select Model”，从下拉菜单选择模型（如“Metal Nut”）。</li>
+<li>状态栏更新为“当前模型: [模型名]”。</li>
+</ul>
+</li>
+<li><strong>单张检测</strong>:
+<ul>
+<li>点击“Detect Single Image”，选择图片文件。</li>
+<li>显示结果，切换按钮禁用，状态栏显示文件名。</li>
+</ul>
+</li>
+<li><strong>批量检测</strong>:
+<ul>
+<li>点击“Detect Batch Images”，选择文件夹。</li>
+<li>处理完成后显示第一张结果，进度条消失，“Next”按钮启用。</li>
+<li>点击“Next”切换下一张，状态栏更新文件名。</li>
+</ul>
+</li>
+<li><strong>查看日志</strong>:
+<ul>
+<li>日志区实时显示操作信息，保存至 <code>logs/detection_log.txt</code>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="输出结果" class="heading-element"><span>输出结果</span>
+  <a href="#%e8%be%93%e5%87%ba%e7%bb%93%e6%9e%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>保存路径</strong>: <code>./output/[模型目录名]/detection_[输入文件名].png</code>。</li>
+<li><strong>格式</strong>: 并排显示原图和异常热图。</li>
+</ul>
+<hr>
+<h2 id="维护与扩展" class="heading-element"><span>维护与扩展</span>
+  <a href="#%e7%bb%b4%e6%8a%a4%e4%b8%8e%e6%89%a9%e5%b1%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="常见问题排查" class="heading-element"><span>常见问题排查</span>
+  <a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e6%8e%92%e6%9f%a5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li><strong>模型加载失败</strong>:
+<ul>
+<li>检查 <code>config.json</code> 中的路径是否正确。</li>
+<li>确保 <code>.pth</code> 文件存在且未损坏。</li>
+</ul>
+</li>
+<li><strong>界面卡顿</strong>:
+<ul>
+<li>批量检测可能阻塞 GUI，考虑添加多线程支持。</li>
+</ul>
+</li>
+<li><strong>依赖缺失</strong>:
+<ul>
+<li>确认所有库已安装，尤其是 <code>simplenet</code>（若为自定义模块）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="扩展建议" class="heading-element"><span>扩展建议</span>
+  <a href="#%e6%89%a9%e5%b1%95%e5%bb%ba%e8%ae%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li><strong>多线程支持</strong>:
+<ul>
+<li>使用 <code>QThread</code> 将检测任务移至后台，避免界面卡顿。</li>
+</ul>
+</li>
+<li><strong>动态配置</strong>:
+<ul>
+<li>添加界面修改 <code>config.json</code> 的功能，支持保存。</li>
+</ul>
+</li>
+<li><strong>结果预览</strong>:
+<ul>
+<li>添加缩略图列表，点击跳转到对应图片。</li>
+</ul>
+</li>
+<li><strong>参数调整</strong>:
+<ul>
+<li>提供界面调整图像预处理参数（如 <code>transform</code>）。</li>
+</ul>
+</li>
+<li><strong>进度增强</strong>:
+<ul>
+<li>预加载模型时显示进度条。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码维护" class="heading-element"><span>代码维护</span>
+  <a href="#%e4%bb%a3%e7%a0%81%e7%bb%b4%e6%8a%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li><strong>模块化</strong>: 逻辑已拆分为独立模块（GUI、处理、加载），便于单独修改。</li>
+<li><strong>配置文件</strong>: 新增模型只需更新 <code>config.json</code>，无需改代码。</li>
+<li><strong>日志</strong>: 通过 <code>logging</code> 模块记录详细运行信息，便于调试。</li>
+</ul>
+<hr>
+<h2 id="版本信息" class="heading-element"><span>版本信息</span>
+  <a href="#%e7%89%88%e6%9c%ac%e4%bf%a1%e6%81%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li><strong>当前版本</strong>: v1.1</li>
+<li><strong>更新日期</strong>: 2025年2月28日</li>
+<li><strong>作者</strong>: LucaZou</li>
+</ul>
+<p>如需进一步支持或功能扩展，请联系开发团队或参考代码注释。</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-03-01 14:18:24">更新于 2025-03-01&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/20250301141824/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://lucazou.github.io/posts/20250301141824/" data-title="Anomaly Detection App 文档" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://lucazou.github.io/posts/20250301141824/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://lucazou.github.io/posts/20250301141824/" data-title="Anomaly Detection App 文档"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="标签 - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/20250227095808/" class="post-nav-item" rel="prev" title="New"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>New</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.144.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>
