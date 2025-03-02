@@ -1,4 +1,9 @@
-# 
+# Anomaly Detection App V1.2
+
+&gt;V1.2
+
+&lt;!--more--&gt;
+
 
 # Anomaly Detection App 文档
 
@@ -248,5 +253,5 @@ anomaly_detection_app/
 ---
 
 > 作者:   
-> URL: https://lucazou.github.io/posts/anomaly-detection-app-v1.2/  
+> URL: https://lucazou.github.io/posts/20250302162447/  
 

@@ -6,8 +6,24 @@
     <description>Lucas Blog</description>
     <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Mar 2025 14:18:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 16:31:45 +0800</lastBuildDate>
     <atom:link href="https://lucazou.github.io/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anomaly Detection App V1.4</title>
+      <link>https://lucazou.github.io/posts/20250302163145/</link>
+      <pubDate>Sun, 02 Mar 2025 16:31:45 +0800</pubDate>
+      <guid>https://lucazou.github.io/posts/20250302163145/</guid>
+      <category domain="https://lucazou.github.io/categories/draft/">Draft</category>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.4&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Anomaly Detection App V1.2</title>
+      <link>https://lucazou.github.io/posts/20250302162447/</link>
+      <pubDate>Sun, 02 Mar 2025 16:24:47 +0800</pubDate>
+      <guid>https://lucazou.github.io/posts/20250302162447/</guid>
+      <category domain="https://lucazou.github.io/categories/draft/">Draft</category>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.2&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
     <item>
       <title>Anomaly Detection App 文档</title>
       <link>https://lucazou.github.io/posts/20250301141824/</link>
@@ -15,14 +31,6 @@
       <guid>https://lucazou.github.io/posts/20250301141824/</guid>
       <category domain="https://lucazou.github.io/categories/draft/">Draft</category>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;摘要：v1.1&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>new</title>
-      <link>https://lucazou.github.io/posts/20250227095808/</link>
-      <pubDate>Thu, 27 Feb 2025 09:58:08 +0800</pubDate>
-      <guid>https://lucazou.github.io/posts/20250227095808/</guid>
-      <category domain="https://lucazou.github.io/categories/draft/">Draft</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;摘要：&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>

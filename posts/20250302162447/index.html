@@ -5,43 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title> - Lucas Blog</title><meta name="author" content="">
-<meta name="description" content="Anomaly Detection App 文档 项目概述 Anomaly Detection App 是一个基于 Python 和 PyQt5 的桌面应用程序，旨在通过深度学习模型（如 Wide ResNet50 和 SimpleNet）进行图像异常检测。它支持单张图片和批量图片处理，提供直观的用户界面，允许用户选择模型、查看检测结果、切换批量检测结果，并显示详细的检测信息。
-">
-  <meta itemprop="name" content="Lucas Blog">
-  <meta itemprop="description" content="Anomaly Detection App 文档 项目概述 Anomaly Detection App 是一个基于 Python 和 PyQt5 的桌面应用程序，旨在通过深度学习模型（如 Wide ResNet50 和 SimpleNet）进行图像异常检测。它支持单张图片和批量图片处理，提供直观的用户界面，允许用户选择模型、查看检测结果、切换批量检测结果，并显示详细的检测信息。">
-  <meta itemprop="wordCount" content="305"><meta property="og:url" content="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/">
+    <title>Anomaly Detection App V1.2 - Lucas Blog</title><meta name="author" content="">
+<meta name="description" content=" V1.2
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="Anomaly Detection App V1.2">
+  <meta itemprop="description" content="V1.2">
+  <meta itemprop="datePublished" content="2025-03-02T16:24:47+08:00">
+  <meta itemprop="dateModified" content="2025-03-02T16:24:47+08:00">
+  <meta itemprop="wordCount" content="306">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="https://lucazou.github.io/posts/20250302162447/">
   <meta property="og:site_name" content="Lucas Blog">
-  <meta property="og:title" content="Lucas Blog">
-  <meta property="og:description" content="Anomaly Detection App 文档 项目概述 Anomaly Detection App 是一个基于 Python 和 PyQt5 的桌面应用程序，旨在通过深度学习模型（如 Wide ResNet50 和 SimpleNet）进行图像异常检测。它支持单张图片和批量图片处理，提供直观的用户界面，允许用户选择模型、查看检测结果、切换批量检测结果，并显示详细的检测信息。">
+  <meta property="og:title" content="Anomaly Detection App V1.2">
+  <meta property="og:description" content="V1.2">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-02T16:24:47+08:00">
+    <meta property="article:modified_time" content="2025-03-02T16:24:47+08:00">
+    <meta property="article:tag" content="Draft">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Lucas Blog">
-  <meta name="twitter:description" content="Anomaly Detection App 文档 项目概述 Anomaly Detection App 是一个基于 Python 和 PyQt5 的桌面应用程序，旨在通过深度学习模型（如 Wide ResNet50 和 SimpleNet）进行图像异常检测。它支持单张图片和批量图片处理，提供直观的用户界面，允许用户选择模型、查看检测结果、切换批量检测结果，并显示详细的检测信息。">
+  <meta name="twitter:title" content="Anomaly Detection App V1.2">
+  <meta name="twitter:description" content="V1.2">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/" title=" - Lucas Blog" /><link rel="next" type="text/html" href="https://lucazou.github.io/posts/20250227095808/" title="new" /><link rel="alternate" type="text/markdown" href="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/index.md" title=" - Lucas Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lucazou.github.io/posts/20250302162447/" title="Anomaly Detection App V1.2 - Lucas Blog" /><link rel="prev" type="text/html" href="https://lucazou.github.io/posts/20250301141824/" title="Anomaly Detection App 文档" /><link rel="next" type="text/html" href="https://lucazou.github.io/posts/20250302163145/" title="Anomaly Detection App V1.4" /><link rel="alternate" type="text/markdown" href="https://lucazou.github.io/posts/20250302162447/index.md" title="Anomaly Detection App V1.2 - Lucas Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "",
+    "headline": "Anomaly Detection App V1.2",
     "inLanguage": "en-us",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/lucazou.github.io\/posts\/anomaly-detection-app-v1.2\/"
-    },"genre": "posts","wordcount":  305 ,
-    "url": "https:\/\/lucazou.github.io\/posts\/anomaly-detection-app-v1.2\/","publisher": {
+      "@id": "https:\/\/lucazou.github.io\/posts\/20250302162447\/"
+    },"genre": "posts","keywords": "draft","wordcount":  306 ,
+    "url": "https:\/\/lucazou.github.io\/posts\/20250302162447\/","datePublished": "2025-03-02T16:24:47+08:00","dateModified": "2025-03-02T16:24:47+08:00","publisher": {
       "@type": "Organization",
-      "name": ""},"author": {
-        "@type": "Person",
-        "name": "作者"
-      },"description": ""
+      "name": ""},"description": ""
   }
   </script><script src="/js/head/color-scheme.min.js"></script></head>
   <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
@@ -75,10 +78,10 @@
 </header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span></span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Anomaly Detection App V1.2</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span></div><div class="post-meta-line"><span title="发布于 0001-01-01 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="0001-01-01">0001-01-01</time></span>&nbsp;<span title="305 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/draft/" class="post-category" title="分类 - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="发布于 2025-03-02 16:24:47"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-02">2025-03-02</time></span>&nbsp;<span title="306 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -135,7 +138,9 @@
     </li>
   </ul>
 </nav></div>
-      </div><div class="content" id="content"><h2 id="anomaly-detection-app-文档" class="heading-element"><span>Anomaly Detection App 文档</span>
+      </div><div class="content" id="content"><blockquote>
+<p>V1.2</p></blockquote>
+<h2 id="anomaly-detection-app-文档" class="heading-element"><span>Anomaly Detection App 文档</span>
   <a href="#anomaly-detection-app-%e6%96%87%e6%a1%a3" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -584,30 +589,27 @@
 <li><strong>准确性</strong>：文档反映了项目的最终状态，包括多线程支持和检测信息显示。</li>
 <li><strong>完整性</strong>：涵盖了安装、运行、使用和维护的所有必要信息。</li>
 <li><strong>可扩展性</strong>：提供了扩展建议，便于未来开发。</li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</ul></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="更新于 0001-01-01 00:00:00">更新于 0001-01-01&nbsp;</span>
-      </div><div class="post-info-license">
-            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
-          </div></div><div class="post-info-line">
-        <div class="post-info-md"><span><a href="/posts/anomaly-detection-app-v1.2/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <span title="更新于 2025-03-02 16:24:47">更新于 2025-03-02&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/20250302162447/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/" data-title=""><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://lucazou.github.io/posts/anomaly-detection-app-v1.2/" data-title=""><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://lucazou.github.io/posts/20250302162447/" data-title="Anomaly Detection App V1.2" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://lucazou.github.io/posts/20250302162447/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://lucazou.github.io/posts/20250302162447/" data-title="Anomaly Detection App V1.2"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="标签 - Draft">Draft</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/20250227095808/" class="post-nav-item" rel="next" title="New">New<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/20250301141824/" class="post-nav-item" rel="prev" title="Anomaly Detection App 文档"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Anomaly Detection App 文档</a><a href="/posts/20250302163145/" class="post-nav-item" rel="next" title="Anomaly Detection App V1.4">Anomaly Detection App V1.4<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article>
 
@@ -621,6 +623,5 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>
