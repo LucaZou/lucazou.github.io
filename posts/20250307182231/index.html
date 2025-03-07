@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>【Pepper机器人管家（一）】项目构建 - Lucas Blog</title><meta name="author" content="">
+<meta name="description" content=" 基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。
+"><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="【Pepper机器人管家（一）】项目构建">
+  <meta itemprop="description" content="基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。">
+  <meta itemprop="datePublished" content="2025-03-07T18:22:31+08:00">
+  <meta itemprop="dateModified" content="2025-03-07T18:22:31+08:00">
+  <meta itemprop="wordCount" content="25">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="https://lucazou.github.io/posts/20250307182231/">
+  <meta property="og:site_name" content="Lucas Blog">
+  <meta property="og:title" content="【Pepper机器人管家（一）】项目构建">
+  <meta property="og:description" content="基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-07T18:22:31+08:00">
+    <meta property="article:modified_time" content="2025-03-07T18:22:31+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="【Pepper机器人管家（一）】项目构建">
+  <meta name="twitter:description" content="基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lucazou.github.io/posts/20250307182231/" title="【Pepper机器人管家（一）】项目构建 - Lucas Blog" /><link rel="prev" type="text/html" href="https://lucazou.github.io/posts/20250306224715/" title="Anomaly Detection App V1.7" /><link rel="next" type="text/html" href="https://lucazou.github.io/posts/20250307182535/" title="【Pepper机器人管家（二)】项目组成-Web开发篇：后端" /><link rel="alternate" type="text/markdown" href="https://lucazou.github.io/posts/20250307182231/index.md" title="【Pepper机器人管家（一）】项目构建 - Lucas Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "【Pepper机器人管家（一）】项目构建",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/lucazou.github.io\/posts\/20250307182231\/"
+    },"genre": "posts","keywords": "draft","wordcount":  25 ,
+    "url": "https:\/\/lucazou.github.io\/posts\/20250307182231\/","datePublished": "2025-03-07T18:22:31+08:00","dateModified": "2025-03-07T18:22:31+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Lucas Blog"><span class="header-title-text">Lucas Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Lucas Blog"><span class="header-title-text">Lucas Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>【Pepper机器人管家（一）】项目构建</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/draft/" class="post-category" title="分类 - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="发布于 2025-03-07 18:22:31"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-07">2025-03-07</time></span>&nbsp;<span title="25 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#choregraphe">Choregraphe</a></li>
+    <li><a href="#web开发">Web开发</a>
+      <ul>
+        <li><a href="#后端"><strong>后端：</strong></a>
+          <ul>
+            <li><a href="#数据库"><strong>数据库</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#前端"><strong>前端:</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><blockquote>
+<p>基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。</p></blockquote>
+<h2 id="项目概述" class="heading-element"><span>项目概述</span>
+  <a href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>基于软银的pepper机器人，使用可视化低代码SDK软件choregraphe和web开发工具链开发一个机器人管家。考虑到的功能有提醒按时用药，健康疑难解答，康复训练教程，闹钟，跌倒检测功能(内置电话功能与邮件功能)，听歌，读报，跳舞……。</p>
+<h2 id="项目架构" class="heading-element"><span>项目架构</span>
+  <a href="#%e9%a1%b9%e7%9b%ae%e6%9e%b6%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>目前考虑的的功能的实现主要分成两部分，一个是基于choregraphe的机器人模块的开发，一个是基于web开发的网站。将这两部分结合后构成一个机器人管家。
+<img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821176.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821176.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821176.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821176.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="choregraphe" class="heading-element"><span>Choregraphe</span>
+  <a href="#choregraphe" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>choregraph主要承担系统的主控并实现提醒、跳舞、交流等功能</strong>
+choregraphe是一个低代码的Pepper SDK，内置很多可拖拽的功能盒子，能完成项目的绝大部分需求。其中还有python script盒子能实现一些简单的python脚本，可惜python的版本只有python 2.7，而且很多库没有内置，在是开发的一大困难之一。</p>
+<p><img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821177.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821177.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821177.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821177.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>第二大难点是代码的调试和程序的稳定性很差，低代码的坏处就是自由度太低，而且网上的教程太少，整个项目开发只需要一份官方文档，官方文档虽然很多地方不齐全但也是比较完整。<a href="http://doc.aldebaran.com/2-4/index_dev_guide.html"target="_blank" rel="external nofollow noopener noreferrer">官方文档</a></p>
+<h2 id="web开发" class="heading-element"><span>Web开发</span>
+  <a href="#web%e5%bc%80%e5%8f%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>Web模块主要承担日程的设置、信息的推送、用户管理等功能</strong>
+web开发选用的技术栈为：flask+MySQL+jinja2的前后端不分离开发流程，页面使用原生js+html+css。没有使用前端框架并使用前后端不分离主要是机器人的平板内置的浏览器版本太低，无法兼容大部分的“重型”js框架，将页面资源在后端渲染或许是比较好的方法。工具链使用的是Pycharm+navicat+vscode，部署使用了nginx+gunicorn，部署服务器为阿里云的轻量应用服务器2核4G：Ubuntu。</p>
+<h3 id="后端" class="heading-element"><span><strong>后端：</strong></span>
+  <a href="#%e5%90%8e%e7%ab%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>后端使用了MVC架构，用蓝图管理路由，并且创建了一些api供机器人调用，机器人与服务器主要同这些api进行通讯。</p>
+<p><img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821178.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821178.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821178.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821178.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="数据库" class="heading-element"><span><strong>数据库</strong></span>
+  <a href="#%e6%95%b0%e6%8d%ae%e5%ba%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>数据库的搭建使用了MySQL+flask-SQLAlchemy的orm框架。数据库涉及到用户的的注册和登录、用户的的日程CRUD、用户邮件的历史的保存和删除。</p>
+<p><img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821179.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821179.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821179.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821179.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="前端" class="heading-element"><span><strong>前端:</strong></span>
+  <a href="#%e5%89%8d%e7%ab%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>前端是二次开发的原生js的页面</p>
+<p><strong>主页:</strong>
+<img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821180.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821180.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821180.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821180.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><strong>日程管理:</strong>
+<img loading="lazy" src="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821181.png" alt="image.png" srcset="https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821181.png?size=small, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821181.png?size=medium 1.5x, https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503071821181.png?size=large 2x" data-title="image.png" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>完整的项目代码参考GitHub: <a href="https://github.com/Lucawell/flaskSchedule-pepper-MVC"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/Lucawell/flaskSchedule-pepper-MVC</a></p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-03-07 18:22:31">更新于 2025-03-07&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/20250307182231/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://lucazou.github.io/posts/20250307182231/" data-title="【Pepper机器人管家（一）】项目构建" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://lucazou.github.io/posts/20250307182231/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://lucazou.github.io/posts/20250307182231/" data-title="【Pepper机器人管家（一）】项目构建"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="标签 - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/20250306224715/" class="post-nav-item" rel="prev" title="Anomaly Detection App V1.7"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Anomaly Detection App V1.7</a><a href="/posts/20250307182535/" class="post-nav-item" rel="next" title="【Pepper机器人管家（二)】项目组成-Web开发篇：后端">【Pepper机器人管家（二)】项目组成-Web开发篇：后端<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.144.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>
