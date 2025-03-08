@@ -223,6 +223,6 @@ anomaly_detection_app/
 
 ---
 
-> 作者:   
+> 作者: LucaZou  
 > URL: https://lucazou.github.io/posts/20250301141824/  
 
