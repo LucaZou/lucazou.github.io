@@ -55,6 +55,6 @@ web开发选用的技术栈为：flask&#43;MySQL&#43;jinja2的前后端不分离
 
 ---
 
-> 作者: LucaZou  
+> 作者: [LucaZou](https://github.com/LucaZou)  
 > URL: https://lucazou.github.io/posts/20250307182231/  
 

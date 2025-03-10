@@ -919,6 +919,6 @@ def edit_event(event_id):
 
 ---
 
-> 作者: LucaZou  
+> 作者: [LucaZou](https://github.com/LucaZou)  
 > URL: https://lucazou.github.io/posts/20250307182650/  
 
