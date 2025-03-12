@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh - 标签 - Luca&#39;s Blog</title>
+    <link>https://lucazou.github.io/tags/ssh/</link>
+    <description>This is my new Hugo FixIt site</description>
+    <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
+    <language>en-us</language>
+    <managingEditor>isliquanzou@gmail.com (LucaZou)</managingEditor>
+    <webMaster>isliquanzou@gmail.com (LucaZou)</webMaster>
+    <lastBuildDate>Wed, 12 Mar 2025 15:18:39 +0800</lastBuildDate>
+    <atom:link href="https://lucazou.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows 宿主机ssh连接VMware虚拟机</title>
+      <link>https://lucazou.github.io/posts/20250312151839/</link>
+      <pubDate>Wed, 12 Mar 2025 15:18:39 +0800</pubDate>
+      <guid>https://lucazou.github.io/posts/20250312151839/</guid>
+      <category domain="https://lucazou.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <description>&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -314,6 +314,6 @@ batch:
 
 ---
 
-> 作者: [LucaZou](https://github.com/LucaZou)  
+> 作者:   
 > URL: https://lucazou.github.io/posts/20250306224715/  
 
