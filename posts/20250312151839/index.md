@@ -104,6 +104,6 @@ vim /etc/ssh/sshd_config
 
 ---
 
-> 作者:   
+> 作者: [LucaZou](https://github.com/LucaZou)  
 > URL: https://lucazou.github.io/posts/20250312151839/  
 
