@@ -8,47 +8,15 @@
     <language>en-us</language>
     <managingEditor>isliquanzou@gmail.com (LucaZou)</managingEditor>
     <webMaster>isliquanzou@gmail.com (LucaZou)</webMaster>
-    <lastBuildDate>Thu, 06 Mar 2025 22:47:15 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Mar 2025 19:47:20 +0800</lastBuildDate>
     <atom:link href="https://lucazou.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Anomaly Detection App V1.7</title>
-      <link>https://lucazou.github.io/posts/20250306224715/</link>
-      <pubDate>Thu, 06 Mar 2025 22:47:15 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250306224715/</guid>
+      <title>Anomaly Detection App</title>
+      <link>https://lucazou.github.io/posts/20250330194720/</link>
+      <pubDate>Sun, 30 Mar 2025 19:47:20 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
+      <guid>https://lucazou.github.io/posts/20250330194720/</guid>
       <category domain="https://lucazou.github.io/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">项目文档</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.7 增加报告模块&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Anomaly Detection App V1.5</title>
-      <link>https://lucazou.github.io/posts/20250304154607/</link>
-      <pubDate>Tue, 04 Mar 2025 15:46:07 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250304154607/</guid>
-      <category domain="https://lucazou.github.io/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">项目文档</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.5&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Anomaly Detection App V1.4</title>
-      <link>https://lucazou.github.io/posts/20250302163145/</link>
-      <pubDate>Sun, 02 Mar 2025 16:31:45 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250302163145/</guid>
-      <category domain="https://lucazou.github.io/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">项目文档</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.4&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Anomaly Detection App V1.2</title>
-      <link>https://lucazou.github.io/posts/20250302162447/</link>
-      <pubDate>Sun, 02 Mar 2025 16:24:47 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250302162447/</guid>
-      <category domain="https://lucazou.github.io/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">项目文档</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;V1.2&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Anomaly Detection App 文档</title>
-      <link>https://lucazou.github.io/posts/20250301141824/</link>
-      <pubDate>Sat, 01 Mar 2025 14:18:24 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250301141824/</guid>
-      <category domain="https://lucazou.github.io/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">项目文档</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;摘要：v1.1&lt;/p&gt;&lt;/blockquote&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
   </channel>
 </rss>

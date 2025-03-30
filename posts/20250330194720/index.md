@@ -1,10 +1,8 @@
-# Anomaly Detection App V1.7
+# Anomaly Detection App
 
-&gt;V1.7 增加报告模块
+&gt;
 
 &lt;!--more--&gt;
-
-
 # Anomaly Detection App 文档
 
 ## 项目概述
@@ -15,26 +13,26 @@
 
 - **主界面**  
 
-![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503062246749.png)
+![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503301946843.png)
 
 
 - **单张检测**  
 
-![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503062246750.png)
+![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503301946844.png)
 
 
 - **批量检测与报告**  
 
-![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503062246751.png)
+![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503301946845.png)
 
-![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503062246752.png)
+![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503301946846.png)
 
 
   *注：新版本增加了“Report”选项卡，显示统计和图表。*
 
 - **历史记录查看**  
 
-![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503062246753.png)
+![image.png](https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202503301946847.png)
 
 
 ### 主要功能
@@ -79,18 +77,54 @@ pip install PyQt5 torch torchvision pillow numpy matplotlib tqdm ruamel.yaml pan
 下载项目代码并确保以下结构完整：
 ```
 anomaly_detection_app/
-├── main.py
-├── gui.py
-├── image_processor.py
-├── model_loader.py
-├── simplenet.py
-├── progress_dialog.py
-├── report_generator.py
-├── performance_monitor.py
-├── exceptions.py
+├── README.md
+├── .gitignore
 ├── config.yaml
-├── logs/              # 日志保存目录（自动创建）
-└── output/            # 检测结果和报告保存目录（自动创建）
+├── requirements.txt
+├── main.py
+├── data/
+│   └── (数据文件)
+├── logs/
+│   └── (日志文件)
+├── output/
+│   └── (输出文件)
+├── models/
+│   └── (训练好的模型文件)
+├── src/
+│   ├── __init__.py
+│   ├── backbones/
+│   │   ├── __init__.py
+│   │   ├── resnet.py
+│   │   ├── simplenet.py
+│   │   └── backones.py
+│   ├── common/
+│   │   ├── __init__.py
+│   │   ├── exceptions.py
+│   │   ├── utils.py
+│   │   └── common.py
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   ├── gui.py
+│   │   └── progress_dialog.py
+│   ├── image_processing/
+│   │   ├── __init__.py
+│   │   └── image_processor.py
+│   ├── metrics/
+│   │   ├── __init__.py
+│   │   └── metrics.py
+│   ├── model_loading/
+│   │   ├── __init__.py
+│   │   └── model_loader.py
+│   ├── performance_monitoring/
+│   │   ├── __init__.py
+│   │   └── performance_monitor.py
+│   └── report_generation/
+│       ├── __init__.py
+│       └── report_generator.py
+└──tests/
+    ├── __init__.py
+    └── test_image_detection.py
+
 ```
 
 ### 配置
@@ -315,5 +349,5 @@ batch:
 ---
 
 > 作者: [LucaZou](https://github.com/LucaZou)  
-> URL: https://lucazou.github.io/posts/20250306224715/  
+> URL: https://lucazou.github.io/posts/20250330194720/  
 
