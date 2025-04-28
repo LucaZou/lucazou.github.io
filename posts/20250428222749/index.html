@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Coze如何解除代码块中的依赖库限制？ - Luca&#39;s Blog</title><meta name="author" content="LucaZou">
+<meta name="description" content=" "><meta name="keywords" content='Coze'>
+  <meta itemprop="name" content="Coze如何解除代码块中的依赖库限制？">
+  <meta itemprop="description" content="">
+  <meta itemprop="datePublished" content="2025-04-28T22:27:49+08:00">
+  <meta itemprop="dateModified" content="2025-04-28T22:27:49+08:00">
+  <meta itemprop="wordCount" content="870">
+  <meta itemprop="keywords" content="Coze"><meta property="og:url" content="https://lucazou.github.io/posts/20250428222749/">
+  <meta property="og:site_name" content="Luca&#39;s Blog">
+  <meta property="og:title" content="Coze如何解除代码块中的依赖库限制？">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-28T22:27:49+08:00">
+    <meta property="article:modified_time" content="2025-04-28T22:27:49+08:00">
+    <meta property="article:tag" content="Coze">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Coze如何解除代码块中的依赖库限制？">
+  <meta name="twitter:description" content="">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lucazou.github.io/posts/20250428222749/" title="Coze如何解除代码块中的依赖库限制？ - Luca&#39;s Blog" /><link rel="prev" type="text/html" href="https://lucazou.github.io/posts/20250330194720/" title="Anomaly Detection App" /><link rel="alternate" type="text/markdown" href="https://lucazou.github.io/posts/20250428222749/index.md" title="Coze如何解除代码块中的依赖库限制？ - Luca's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Coze如何解除代码块中的依赖库限制？",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/lucazou.github.io\/posts\/20250428222749\/"
+    },"genre": "posts","keywords": "Coze","wordcount":  870 ,
+    "url": "https:\/\/lucazou.github.io\/posts\/20250428222749\/","datePublished": "2025-04-28T22:27:49+08:00","dateModified": "2025-04-28T22:27:49+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "LucaZou"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Luca&#39;s Blog"><span class="header-title-text">Luca&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Luca&#39;s Blog"><span class="header-title-text">Luca&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Coze如何解除代码块中的依赖库限制？</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/LucaZou" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='https://www.gravatar.com/avatar/9f5a1ad7fad3a0db11b1adc11a98c085?s=32&d=' alt="LucaZou" height="16" width="16">&nbsp;LucaZou</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category" title="分类 - 教程"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 教程</a></span></div><div class="post-meta-line"><span title="发布于 2025-04-28 22:27:49"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-04-28">2025-04-28</time></span>&nbsp;<span title="870 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 900 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题背景coze代码块的局限">问题背景：Coze代码块的局限</a></li>
+    <li><a href="#解决方案开发插件plugin">解决方案：开发插件（Plugin）</a>
+      <ul>
+        <li><a href="#插件功能概览">插件功能概览</a></li>
+      </ul>
+    </li>
+    <li><a href="#插件核心代码解析">插件核心代码解析</a>
+      <ul>
+        <li><a href="#1-下载并读取excel文件">1. 下载并读取Excel文件</a></li>
+        <li><a href="#2-安全执行pandas代码块">2. 安全执行Pandas代码块</a></li>
+        <li><a href="#3-强制要求输出result">3. 强制要求输出<code>result</code></a></li>
+        <li><a href="#4-结果处理与序列化">4. 结果处理与序列化</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用效果示例">使用效果示例</a></li>
+    <li><a href="#小结">小结</a></li>
+    <li><a href="#附完整插件源码">附：完整插件源码</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><blockquote>
+</blockquote>
+<h2 id="案例分析基于pandas的数据处理插件开发" class="heading-element"><span>案例分析：基于Pandas的数据处理插件开发</span>
+  <a href="#%e6%a1%88%e4%be%8b%e5%88%86%e6%9e%90%e5%9f%ba%e4%ba%8epandas%e7%9a%84%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86%e6%8f%92%e4%bb%b6%e5%bc%80%e5%8f%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>在使用Coze工作流（Workflow）编排自动化任务时，我们经常会用到「代码块」(本文针对Python语言)来执行自定义逻辑。但如果你深入开发过，就会发现一个<strong>隐秘的限制</strong>：</p>
+<blockquote>
+<p><strong>Coze工作流内置的Python代码块，对第三方库支持非常有限</strong>，尤其是像 <code>pandas</code>、<code>openpyxl</code> 这样的重量级依赖，经常无法直接使用，在 Python 环境中，仅内置了两个第三方依赖库：requests_async 和 numpy。<a href="https://www.coze.cn/open/docs/guides/code_node"target="_blank" rel="external nofollow noopener noreferrer">官方使用说明</a></p></blockquote>
+<p>那有没有办法<strong>突破这一限制</strong>，在Coze里灵活使用各种Python库，执行更复杂的逻辑呢？<br>
+答案是——<strong>开发自定义插件（Plugin）！</strong></p>
+<p>这篇文章将通过一个实战案例，教你如何绕过代码块的依赖限制，自由调用Pandas来处理Excel数据。</p>
+<hr>
+<h2 id="问题背景coze代码块的局限" class="heading-element"><span>问题背景：Coze代码块的局限</span>
+  <a href="#%e9%97%ae%e9%a2%98%e8%83%8c%e6%99%afcoze%e4%bb%a3%e7%a0%81%e5%9d%97%e7%9a%84%e5%b1%80%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Coze官方文档中提到，代码块运行环境默认只支持部分基础Python库，如：</p>
+<p><img loading="lazy" src='https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202504282220701.png' alt="image.png"></p>
+<p>而像 <code>pandas</code>、<code>requests</code> 这类第三方库，往往是<strong>不支持的</strong>。即使你在代码中导入了它们，也会报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ModuleNotFoundError: No module named <span class="s1">&#39;pandas&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这使得很多数据处理、文件解析、网络请求等需求，难以直接用原生代码块完成。</p>
+<hr>
+<h2 id="解决方案开发插件plugin" class="heading-element"><span>解决方案：开发插件（Plugin）</span>
+  <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e5%bc%80%e5%8f%91%e6%8f%92%e4%bb%b6plugin" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Coze允许开发者<strong>自定义插件</strong>，通过独立服务或Coze托管运行插件代码。这种方式拥有<strong>更完整的Python环境支持</strong>，可以自由安装依赖包，极大扩展了功能边界。</p>
+<p>比如，我开发了一个叫 <code>Exec_Code</code> 的插件，它支持：</p>
+<ul>
+<li>在线下载指定的Excel文件</li>
+<li>执行任意Pandas数据处理代码</li>
+<li>返回处理后的结果，供后续流程继续使用</li>
+</ul>
+<h3 id="插件功能概览" class="heading-element"><span>插件功能概览</span>
+  <a href="#%e6%8f%92%e4%bb%b6%e5%8a%9f%e8%83%bd%e6%a6%82%e8%a7%88" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>
+<p><strong>输入参数</strong>：</p>
+<ul>
+<li><code>files</code>: Excel文件的URL地址</li>
+<li><code>code_block</code>: 要执行的Pandas代码片段</li>
+</ul>
+</li>
+<li>
+<p><strong>使用依赖库</strong>：</p>
+<ul>
+<li><code>pandas</code>：数据处理</li>
+<li><code>openpyxl</code>：解析Excel</li>
+<li><code>pydantic</code>：参数校验</li>
+<li><code>requests</code>：文件下载</li>
+</ul>
+</li>
+<li>
+<p><strong>核心逻辑</strong>：</p>
+<ol>
+<li>下载并读取Excel文件（支持多Sheet）</li>
+<li>安全执行用户提供的代码块</li>
+<li>强制要求代码块输出 <code>result</code> 变量</li>
+<li>自动将DataFrame或复杂对象转换为JSON返回</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="插件核心代码解析" class="heading-element"><span>插件核心代码解析</span>
+  <a href="#%e6%8f%92%e4%bb%b6%e6%a0%b8%e5%bf%83%e4%bb%a3%e7%a0%81%e8%a7%a3%e6%9e%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这里简单拆解一下主要逻辑：</p>
+<h3 id="1-下载并读取excel文件" class="heading-element"><span>1. 下载并读取Excel文件</span>
+  <a href="#1-%e4%b8%8b%e8%bd%bd%e5%b9%b6%e8%af%bb%e5%8f%96excel%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sheets_dict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">sheet_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过<code>requests</code>获取文件，通过<code>pandas</code>一次性读取<strong>全部Sheet</strong>成字典 <code>{sheet_name: DataFrame}</code>。</p>
+<hr>
+<h3 id="2-安全执行pandas代码块" class="heading-element"><span>2. 安全执行Pandas代码块</span>
+  <a href="#2-%e5%ae%89%e5%85%a8%e6%89%a7%e8%a1%8cpandas%e4%bb%a3%e7%a0%81%e5%9d%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>为了避免执行恶意代码，定义了一个<strong>受限版的globals</strong>环境，只允许部分内置函数和必要模块（pandas、json）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">safe_globals</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;__builtins__&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;print&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;len&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;pd&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;json&#39;</span><span class="p">:</span> <span class="n">json</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">local_vars</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="n">sheets_dict</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">exec</span><span class="p">(</span><span class="n">input_args</span><span class="o">.</span><span class="n">code_block</span><span class="p">,</span> <span class="n">safe_globals</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样，即使是用户自定义的代码，也可以保证一定程度的安全性。</p>
+<hr>
+<h3 id="3-强制要求输出result" class="heading-element"><span>3. 强制要求输出<code>result</code></span>
+  <a href="#3-%e5%bc%ba%e5%88%b6%e8%a6%81%e6%b1%82%e8%be%93%e5%87%baresult" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>所有用户的Pandas逻辑，<strong>必须赋值给<code>result</code></strong> 变量，否则插件会直接返回错误提示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="s1">&#39;result&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">local_vars</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s2">&#34;代码块未定义 result 变量&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样可以标准化输出，保证后续节点能正确使用结果。</p>
+<hr>
+<h3 id="4-结果处理与序列化" class="heading-element"><span>4. 结果处理与序列化</span>
+  <a href="#4-%e7%bb%93%e6%9e%9c%e5%a4%84%e7%90%86%e4%b8%8e%e5%ba%8f%e5%88%97%e5%8c%96" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Pandas的DataFrame、复杂对象，默认是无法直接转成JSON的。因此，写了一个递归函数 <code>convert_to_serializable</code>，确保输出最终可JSON化。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;json_result&#39;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">),</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">convert_to_serializable</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="使用效果示例" class="heading-element"><span>使用效果示例</span>
+  <a href="#%e4%bd%bf%e7%94%a8%e6%95%88%e6%9e%9c%e7%a4%ba%e4%be%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>假设我有一个Excel，里面是销售数据，想要提取某个Sheet的总销售额。</p>
+<p>可以在Coze工作流中这样调用插件：</p>
+<ul>
+<li><code>files</code>: &ldquo;<a href="https://example.com/sales.xlsx"target="_blank" rel="external nofollow noopener noreferrer">https://example.com/sales.xlsx</a>&rdquo;</li>
+<li><code>code_block</code>:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s2">&#34;Sheet1&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">total_sales</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&#34;销售额&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;total_sales&#34;</span><span class="p">:</span> <span class="n">total_sales</span><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行后，插件返回：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="s2">&#34;success&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;result&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;total_sales&#34;</span><span class="p">:</span> <span class="mi">128000</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>是不是比在代码块中苦苦挣扎安装库、处理异常方便多了？</p>
+<hr>
+<h2 id="小结" class="heading-element"><span>小结</span>
+  <a href="#%e5%b0%8f%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>总结一下：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">问题</th>
+          <th style="text-align: left">解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Coze代码块无法直接用第三方库</td>
+          <td style="text-align: left">开发插件，运行在自由环境</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">想用Pandas、Requests等</td>
+          <td style="text-align: left">在插件中声明依赖</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">保证安全执行动态代码</td>
+          <td style="text-align: left">使用受限globals + 控制输出变量</td>
+      </tr>
+  </tbody>
+</table>
+<p>插件的方式，不仅解锁了更多强大的Python能力，还能让你的Coze工作流更加灵活、强大！</p>
+<p><strong>插件商店搜索 ’Exec_Code&rsquo; 立即体验！</strong>
+<img loading="lazy" src='https://img-1313049298.cos.ap-shanghai.myqcloud.com/note-img/202504282227214.png' alt="image.png"></p>
+<hr>
+<h2 id="附完整插件源码" class="heading-element"><span>附：完整插件源码</span>
+  <a href="#%e9%99%84%e5%ae%8c%e6%95%b4%e6%8f%92%e4%bb%b6%e6%ba%90%e7%a0%81" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">runtime</span> <span class="kn">import</span> <span class="n">Args</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typings.exec2.exec2</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">HttpUrl</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Dict</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 输入模型</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PluginInput</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">files</span><span class="p">:</span> <span class="n">HttpUrl</span>  <span class="c1"># 单一 Excel 文件的 URL</span>
+</span></span><span class="line"><span class="cl">    <span class="n">code_block</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># 要执行的 Pandas 代码块</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出模型</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PluginOutput</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># 执行状态（success 或 error）</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 执行结果，需为字典格式</span>
+</span></span><span class="line"><span class="cl">    <span class="n">error</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 错误信息（如果有）</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">convert_to_serializable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    递归地将对象转换为 JSON 可序列化格式，处理 DataFrame 和多 sheet 字典。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        obj: 要转换的对象（例如 DataFrame、字典、列表等）
+</span></span></span><span class="line"><span class="cl"><span class="s2">        
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        JSON 可序列化对象（dict、list、str、int、float、bool、None）
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Converting DataFrame to JSON string: </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># 确保中文字符正确编码</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 处理多 sheet 字典或其他字典类型</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">convert_to_serializable</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="n">convert_to_serializable</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">))</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">obj</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Unsupported type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="si">}</span><span class="s2"> in result, converting to str&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Args</span><span class="p">[</span><span class="n">Input</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    执行 Pandas 代码块，支持加载 Excel 文件的所有 sheet。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Parameters:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - args.input.files: 单一 Excel 文件的 URL
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - args.input.code_block: 要执行的 Pandas 代码（必须赋值给 &#39;result&#39;）
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - args.logger: 日志记录器实例
+</span></span></span><span class="line"><span class="cl"><span class="s2">    
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    - PluginOutput 包含状态、结果和错误信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">logger</span> <span class="ow">or</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Starting PandasCodeExecutor plugin&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 验证输入</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input_args</span> <span class="o">=</span> <span class="n">PluginInput</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">files</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">files</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">code_block</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">code_block</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Input validation passed&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 检查输入是否为空</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;No file URL provided&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s2">&#34;未提供文件 URL&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">input_args</span><span class="o">.</span><span class="n">code_block</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;Code block is empty&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s2">&#34;代码块为空&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 下载并读取 Excel 文件的所有 sheet</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 使用 sheet_name=None 加载所有 sheet，返回 {sheet_name: DataFrame} 字典</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sheets_dict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">sheet_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Successfully loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sheets_dict</span><span class="p">)</span><span class="si">}</span><span class="s2"> sheets from </span><span class="si">{</span><span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">sheets_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Failed to download file </span><span class="si">{</span><span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;下载文件失败: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">ParserError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Failed to parse Excel file </span><span class="si">{</span><span class="n">input_args</span><span class="o">.</span><span class="n">files</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;解析Excel文件失败: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 设置安全的执行环境</span>
+</span></span><span class="line"><span class="cl">        <span class="n">safe_globals</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;__builtins__&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;print&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;len&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;range&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;str&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;int&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;dict&#39;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;set&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;tuple&#39;</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;bool&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;abs&#39;</span><span class="p">:</span> <span class="nb">abs</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="nb">max</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="nb">min</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;sum&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;round&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s1">&#39;zip&#39;</span><span class="p">:</span> <span class="nb">zip</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;pd&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="p">,</span>  <span class="c1"># 提供 pandas 库</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;json&#39;</span><span class="p">:</span> <span class="n">json</span>  <span class="c1"># 提供 json 库</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 准备本地变量</span>
+</span></span><span class="line"><span class="cl">        <span class="n">local_vars</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="n">sheets_dict</span><span class="p">,</span>  <span class="c1"># 提供所有 sheet 的字典 {sheet_name: DataFrame}</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="kc">None</span>  <span class="c1"># 用于存储 code_block 的输出</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 执行代码块</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">exec</span><span class="p">(</span><span class="n">input_args</span><span class="o">.</span><span class="n">code_block</span><span class="p">,</span> <span class="n">safe_globals</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Code block executed successfully&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Code execution failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Code block: </span><span class="si">{</span><span class="n">input_args</span><span class="o">.</span><span class="n">code_block</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;代码执行失败: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 获取结果</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="s1">&#39;result&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">local_vars</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&#34;Code block did not define &#39;result&#39; variable&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s2">&#34;代码块未定义 result 变量&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="o">=</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Result type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="si">}</span><span class="s2">, value: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;No result assigned in code block&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;success&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s2">&#34;代码块未赋值给result&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 转换为 JSON 可序列化格式</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;json_result&#39;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">),</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">convert_to_serializable</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Converted result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Result processed for output&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 验证 result 是否为字典</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Result is not a dictionary: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;result 必须是字典，实际类型为 </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;success&#34;</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Failed to create PluginOutput: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;无法序列化 result: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Plugin execution failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">PluginOutput</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&#34;error&#34;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-04-28 22:27:49">更新于 2025-04-28&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/20250428222749/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://lucazou.github.io/posts/20250428222749/" data-title="Coze如何解除代码块中的依赖库限制？" data-hashtags="Coze"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://lucazou.github.io/posts/20250428222749/" data-hashtag="Coze"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://lucazou.github.io/posts/20250428222749/" data-title="Coze如何解除代码块中的依赖库限制？"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/coze/" class="post-tag" title="标签 - Coze">Coze</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/20250330194720/" class="post-nav-item" rel="prev" title="Anomaly Detection App"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Anomaly Detection App</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.144.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="https://github.com/LucaZou"target="_blank" rel="external nofollow noopener noreferrer">LucaZou</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script><script>
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+      gtag('config', 'G-P7ZCZJP2K1');
+    </script><script src="https://www.googletagmanager.com/gtag/js?id=G-P7ZCZJP2K1" async></script></body>
+</html>

@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>教程 - 分类 - Luca&#39;s Blog</title>
-    <link>https://lucazou.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+    <title>Coze - 标签 - Luca&#39;s Blog</title>
+    <link>https://lucazou.github.io/tags/coze/</link>
     <description>This is my new Hugo FixIt site</description>
     <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en-us</language>
     <managingEditor>isliquanzou@gmail.com (LucaZou)</managingEditor>
     <webMaster>isliquanzou@gmail.com (LucaZou)</webMaster>
     <lastBuildDate>Mon, 28 Apr 2025 22:27:49 +0800</lastBuildDate>
-    <atom:link href="https://lucazou.github.io/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lucazou.github.io/tags/coze/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coze如何解除代码块中的依赖库限制？</title>
       <link>https://lucazou.github.io/posts/20250428222749/</link>
       <pubDate>Mon, 28 Apr 2025 22:27:49 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
       <guid>https://lucazou.github.io/posts/20250428222749/</guid>
-      <category domain="https://lucazou.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <description>&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>windows 宿主机ssh连接VMware虚拟机</title>
-      <link>https://lucazou.github.io/posts/20250312151839/</link>
-      <pubDate>Wed, 12 Mar 2025 15:18:39 +0800</pubDate><author>isliquanzou@gmail.com (LucaZou)</author>
-      <guid>https://lucazou.github.io/posts/20250312151839/</guid>
       <category domain="https://lucazou.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <description>&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
